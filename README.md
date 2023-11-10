@@ -1,3 +1,3 @@
 # demo
-first repository
+first repository\n
 user vamshi
