@@ -1,3 +1,3 @@
 # demo
-first repository\n
+first repository
 user vamshi(github)
