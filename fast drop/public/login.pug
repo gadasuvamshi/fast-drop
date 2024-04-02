@@ -1,0 +1,72 @@
+extends template
+
+block head
+	title Log In - Drew's Delivery
+	link(rel="stylesheet" type="text/css" href="/style/login.css")
+	script(type="text/javascript" src="/js/login.js")
+
+block content
+
+	// Email and Password (twice if submitting)
+	div.container.login-form.signup-form.page1
+		form.form-login(role='form')
+			h2.form-signin-heading.sign-in-header Log In or Sign Up
+			label(for='email') email
+			input.form-control.email(autofocus='' required='' type='email' name='email')
+			p.has-error.errmsg.email Invalid Email.
+			p.has-error.errmsg.dup-email You've already signed up! 
+				a.forgot-pw(href='#forgot-pw') Forgot your password?
+			label(for='password') password
+			input.form-control.password.pass1(type='password' required='' name='password')
+			p.has-error.errmsg.pass Invalid password, please try again.
+			p.has-error.errmsg.login Invalid login, please try again.
+			div.pass2
+				label.pass2(for='pass2') confirm password
+				input.form-control.password.pass2(type='password' required='' name='pass2')
+			p.has-error.errmsg.pass-match Mismatched Passwords, please try again.
+		div.col-xs-6.login-btns.login-btn
+			button.btn.btn-lg.btn-primary.btn-block.login-btn Log In
+		div.col-xs-6.login-btns.signup-btn
+			button.btn.btn-lg.btn-primary.btn-block.signup-btn Sign Up
+		div.col-xs-12#forgot-pw
+			p There currently isn't a mechanism for resetting your password, but you can email me (drewmcarthur1@gmail.com) and I can do that manually for you.
+
+	// Full name and phone number
+	div.container.login-form.signup-form.page2
+		form.form-login(role='form')
+			h2.form-signin-heading.sign-in-header Page 2
+			label(for='name') name
+			input.form-control.name(autofocus='' required='' type='text' name='name')
+			p.has-error.errmsg.name Name is required, please try again.
+			label(for='phone') phone
+			span.for-phone.help is not required, but eases communication.
+			input.form-control.phone(type='tel' name='phone')
+			label(for='room') room
+			span.for-room.help is not required, but allows door service.
+			input.form-control.room(autofocus='' required='' type='text' name='room')
+		div.col-xs-6.login-btns.back-btn
+			button.btn.btn-lg.btn-primary.btn-block.back-btn Back
+		div.col-xs-6.login-btns.next-btn
+			button.btn.btn-lg.btn-primary.btn-block.next-btn Next
+
+	// Confirm info and submit
+	div.container.login-form.signup-form.page3
+		form.form-login(role='form')
+			h2.form-signin-heading.sign-in-header Confirm Information
+			label.email(for='email') email
+			input.form-control.email(autofocus='' required='' type='email' name='email')
+			label.password(for='password') password
+			input.form-control.password(type='password' required='' name='password')
+			label.name(for='name') name
+			input.form-control.name(autofocus='' required='' type='text' name='name')
+			label.phone(for='phone') phone
+			input.form-control.phone(type='tel' name='phone')
+			p.has-error.errmsg.phone Invalid phone number, please try again.
+			label.room(for='room') room
+			input.form-control.room(autofocus='' required='' type='text' name='room')
+			input.form-control.none(style='display:none;')
+			p.help Please go back to edit information.
+		div.col-xs-6.login-btns.back-btn
+			button.btn.btn-lg.btn-primary.btn-block.back-btn Back
+		div.col-xs-6.login-btns.submit-btn
+			button.btn.btn-lg.btn-primary.btn-block.submit-btn Submit

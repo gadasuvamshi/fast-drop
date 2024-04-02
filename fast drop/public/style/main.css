@@ -1,0 +1,19 @@
+.container {
+	max-width: 450px;
+}
+h1 {
+    font-family: ubuntu;
+}
+.errmsg {
+	color: red;
+	display: none;
+}
+
+input {
+	border-width: 1px;
+	border-radius: 4px;
+}
+
+input.invalid, :invalid {
+	border-color: red;
+}
